@@ -1,0 +1,65 @@
+
+.content ul li{
+    width: 900px;
+    height: 155px;
+    background-color: #fafafa;
+    margin: 0px;
+    list-style-type:none;
+    border-bottom: 1px solid rgba(126, 122, 122, 0.185);
+}
+.content ul li img{
+    margin: 20px 30px 20px 10px;
+    vertical-align: middle;
+}
+
+.content .imga{
+    float: left;
+    width: 220px;
+    height: 155px;
+}
+
+.content .info{
+    float: left;
+    width: 490px;
+    height: 155px;
+}
+.content .info span{
+    display: inline-block;
+    line-height: 2em;
+}
+
+.content .info .name{
+    padding: 15px 0 0 0;
+}
+
+.content .price{
+    float: right;
+    width: 180px;
+    height: 155px;
+}
+.content .price span{
+    font-size: 40px;
+    color: red;
+    vertical-align: middle;
+    line-height: 3.5em;
+}
+.content .price em{
+    font-family:SimSun;
+    font-style: italic;
+    vertical-align: middle;
+    margin: 0 0 0 4px;
+}
+.content .price a{
+    line-height: 0;
+    text-decoration:none;
+    margin-right: 15px;
+    float: right;
+}
+.content .info .name{
+    font-size: 20px;
+    font-weight: 900;
+}
+.content .info .size,.location{
+    color: #a5a5b2;
+    font-size: 12px;
+}
