@@ -78,7 +78,7 @@
 
 
 <div class="header">
-    <a class="logo">电影管理系统</a>
+    <a class="logo">售房管理系统</a>
     <a>首页</a>
     <a>电影</a>
     <form class="search" action="roundSearchServlet" method="post">
