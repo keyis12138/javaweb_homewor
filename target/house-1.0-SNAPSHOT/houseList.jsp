@@ -16,8 +16,8 @@
 <%
     List<House> houses = (List<House>)request.getAttribute("houses");
 %>
+<%@include file="head.jsp"%>
 
-<%@include file="/head.jsp"%>
 
 <div class="content">
     <ul>
