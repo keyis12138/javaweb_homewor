@@ -4,19 +4,19 @@ package com.SaleHouse.Entity;
 import java.util.Date;
 
 public class Order {
-    private Date time;
+    private Date otime;
     private Integer oid;
     private String oname;
     private Integer uid;
     private Integer hid;
     private Integer price;
 
-    public Date getTime() {
-        return time;
+    public Date getOtime() {
+        return otime;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setOtime(Date otime) {
+        this.otime = otime;
     }
 
     public Integer getOid() {
@@ -62,8 +62,8 @@ public class Order {
     public Order() {
     }
 
-    public Order(Date time, Integer oid, String oname, Integer uid, Integer hid, Integer price) {
-        this.time = time;
+    public Order(Integer oid, String oname, Integer uid, Integer hid, Integer price, Date otime) {
+        this.otime = otime;
         this.oid = oid;
         this.oname = oname;
         this.uid = uid;
@@ -74,7 +74,7 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "time=" + time +
+                "otime=" + otime +
                 ", oid=" + oid +
                 ", oname='" + oname + '\'' +
                 ", uid=" + uid +
