@@ -3,6 +3,9 @@ package com.SaleHouse.Dao.impl;
 import com.SaleHouse.Dao.HouseDao;
 import org.junit.jupiter.api.Test;
 
+
+import java.sql.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class HouseDaoimplTest {
