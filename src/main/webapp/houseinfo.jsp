@@ -19,6 +19,7 @@
 <%
     HouseInfo houseInfo = (HouseInfo) request.getAttribute("houseInfo") ;
 %>
+<%@include file="head2.jsp"%>
             <!--基本信息开始-->
             <div class="main-item" align="center">
                 <h3>基本信息</h3>
