@@ -1,6 +1,7 @@
 package com.SaleHouse.Dao.impl;
 
 import com.SaleHouse.Dao.OrderDao;
+import com.SaleHouse.Dao.UserDao;
 import com.SaleHouse.Entity.Order;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OrderDaoimplTest {
     OrderDao orderDao = new OrderDaoimpl();
+    UserDao userDao = new UserDaoimpl();
     @Test
     void getOrder() {
         List<Order> orders = orderDao.getOrder();
@@ -32,5 +34,10 @@ class OrderDaoimplTest {
 
     @Test
     void deleteOrder() {
+    }
+
+    @Test
+    void testGetUserOrder() {
+        System.out.println(orderDao.getUserOrder(userDao.queryUserByUsername("admin")));
     }
 }

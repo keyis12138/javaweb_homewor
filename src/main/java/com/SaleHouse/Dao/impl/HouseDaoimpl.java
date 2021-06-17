@@ -13,6 +13,12 @@ public class HouseDaoimpl extends BaseDao implements HouseDao {
     }
 
     @Override
+    public List<House> searchHouse(String keyword) {
+        String sql = "select * from t_house where hname like ?";
+        return queryForList(House.class,sql,"%"+keyword+"%");
+    }
+
+    @Override
     public void AddHouse(House house) {
         String sql = "insert into t_house (hname,hsize,hlocation,hprice,himg) values(?,?,?,?,?)";
         update(sql,house.getHname(),house.getHsize(),house.getHlocation(),house.getHprice(),house.getHimg());

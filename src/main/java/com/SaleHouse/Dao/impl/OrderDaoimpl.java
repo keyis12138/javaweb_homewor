@@ -16,13 +16,13 @@ public class OrderDaoimpl extends BaseDao implements OrderDao {
     @Override
     public List<Order> getUserOrder(User user) {
         String sql = "select * from t_order where uid=?";
-        return queryForList(Order.class,sql);
+        return queryForList(Order.class,sql,user.getId());
     }
 
     @Override
     public void AddOrder(Order order) {
-        String sql = "insert into t_order (oid,oname,uid,hid,price,otime) values(?,?,?,?,?,?)";
-        update(sql,order.getOid(),order.getOname(),order.getUid(),order.getHid(),order.getPrice(),order.getOtime());
+        String sql = "insert into t_order (oname,uid,hid,price,otime) values(?,?,?,?,?)";
+        update(sql,order.getOname(),order.getUid(),order.getHid(),order.getPrice(),order.getOtime());
     }
 
     @Override
@@ -30,4 +30,11 @@ public class OrderDaoimpl extends BaseDao implements OrderDao {
         String sql = "delete from t_order where oid=?";
         update(sql,order.getOid());
     }
+
+    @Override
+    public Order FindOrder(int orderid) {
+        String sql = "select * from t_order where oid=?";
+        return queryForOne(Order.class,sql,orderid);
+    }
+
 }

@@ -17,7 +17,15 @@ public class UserServlet extends HttpServlet {
     private UserDao userDao = new UserDaoimpl();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html:charset=UTF-8");
+        String action1 = request.getParameter("action");
+        if (action1.equals("delete")) {
+            int userid = Integer.valueOf(request.getParameter("userid"));
+            userDao.DeleteUser(userDao.FindUser(userid));
+            request.setAttribute("houses", userDao.getUser());
+            request.getRequestDispatcher("AdminPage/accountlist.jsp").forward(request, response);
+        }
     }
 
     @Override

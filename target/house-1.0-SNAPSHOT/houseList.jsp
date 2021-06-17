@@ -11,13 +11,19 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/houseList.css">
+    <script>
+        function conf(uname,name,id) {
+            if(confirm("确定订购[" + name +"]吗？")){
+                window.location.href = "OrderServlet?action=add&hid="+id+"&username="+uname;
+            }
+        }
+    </script>
 </head>
 <body>
 <%
     List<House> houses = (List<House>)request.getAttribute("houses");
+    String username = (String) request.getAttribute("username");
 %>
-<%@include file="head.jsp"%>
-
 
 <div class="content">
     <ul>
@@ -37,7 +43,7 @@
                             <%=house.getHprice()%>
                         </span>
                 <em>元/㎡</em><br>
-                <a href="#">+订购</a>
+                <a href="#" onclick="conf('<%=username%>','<%=house.getHname()%>','<%=house.getHid()%>')">+订购</a>
             </div>
         </li>
     <%}%>

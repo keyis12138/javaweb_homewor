@@ -16,4 +16,6 @@ public interface OrderDao {
 
     public void DeleteOrder(Order order);
 
+    public Order FindOrder(int orderid);
+
 }

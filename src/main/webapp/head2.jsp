@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Geeklu
-  Date: 2021/6/15
-  Time: 19:08
+  User: A9819
+  Date: 2021/6/5
+  Time: 21:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -23,9 +23,8 @@
 </style>
 
 <div class="header">
-    <div style="float: left; margin-left: 20px;height: 100%;"><a>电影管理后台</a></div>
+    <div style="float: left; margin-left: 20px;height: 100%;"><a>我的订单</a></div>
     <div style="float: right; margin-right: 20px; height: 100%;">
         <a href="login.jsp">注销用户</a>
-        <a href="mainServlet">回到首页</a>
     </div>
 </div>
