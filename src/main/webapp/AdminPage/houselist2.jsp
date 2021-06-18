@@ -67,7 +67,7 @@
         <%}%>
         </tbody>
     </table>
-    <input type="button" value="新增" id="add">s
+    <input type="button" value="新增" id="add">
 </div>
 </body>
 </html>

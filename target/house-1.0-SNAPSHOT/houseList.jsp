@@ -19,9 +19,16 @@
     <script src="script/jquery-1.7.2.js"></script>
     <script>
         function conf(uname,name,id) {
-            if(confirm("确定订购[" + name +"]吗？")){
-                window.location.href = "OrderServlet?action=add&hid="+id+"&username="+uname;
+            if(uname==""||uname=="null"){
+                alert("请先登录！")
+                window.location.href="login.jsp"
+                return;
+            }else{
+                if(confirm("确定订购[" + name +"]吗？")){
+                    window.location.href = "OrderServlet?action=add&hid="+id+"&username="+uname;
+                }
             }
+
         }
 
         function search(){
