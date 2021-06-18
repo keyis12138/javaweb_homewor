@@ -6,7 +6,7 @@
     <title>房屋管理</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/all.css">
-    <script src="../script/jquery-1.7.2.js"></script>
+    <script src="script/jquery-1.7.2.js"></script>
     <script>
         function conf(name,id) {
             if(confirm("确定删除[" + name +"]吗？")){

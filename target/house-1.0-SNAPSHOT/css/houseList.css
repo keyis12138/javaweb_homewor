@@ -1,4 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+/*样式重置*/
+*{margin:0px;padding:0px;list-style:none;text-decoration:none;font-family:"微软雅黑", "宋体", "黑体";font-weight:normal;}
+/*页头*/
+#headCon{
+    min-width:1200px;}
+#headCon>div{
+    width:1200px;
+    margin:auto;
+    margin-top:10px;
+    overflow:hidden;
+}
+#headCon>div>p{
+    float:left;
+    font-size:14px;
+    color:#999;}
+#headCon>div>ol{
+    width:300px;
+    float:right;
+    overflow:hidden;}
+#headCon>div>ol>li{
+    overflow:hidden;
+    float:left;}
+#headCon>div>ol>li>a{
+    font-size:14px;
+    color:#999;
+    float:left;
+    margin-right:10px;
+}
+#headCon>div>ol>li>a:hover{
+    color:#fb0000;}
+#headCon>div>ol>a{
+    width:76px;
+    height:14px;
+    text-align:center;
+    line-height:14px;
+    float:left;
+    font-size:14px;
+    color:#999;
+    border-left:1px solid #a1a1a1;
+    border-right:1px solid #a1a1a1;
+    margin-top:3px;}
+#headCon>div>ol>a:hover{
+    color:#fb0000;}
+#headCon>div>ol>.shoppingCar{
+    margin-left:10px;
+    width:120px;
+    border:none;
+    height:20px;
+    float:left;
+    overflow:hidden;}
+#headCon>div>ol>.shoppingCar>i{
+    float:left;
+    width:22px;
+    height:18px;
+    vertical-align:middle;
+    background:url(../images/sprite.png) no-repeat 0px 0px;}
+#headCon>div>ol>.shoppingCar>span{
+    float:left;
+    margin-left:10px;}
+#headCon>ul{
+    width:1200px;
+    margin:auto;
+    overflow:hidden;
+    margin-top:30px;}
+#headCon>ul>a{
+    float:left;}
+#headCon>ul>a>li{
+    width:92px;
+    height:63px;
+    background:url(../images/sprite.png) no-repeat -22px 0px;}
+#headCon>ul>ol{
+    float:left;
+    overflow:hidden;
+    margin-left:180px;}
+#headCon>ul>ol>li{
+    float:left;
+    margin-top:25px;
+    margin-right:40px;}
+#headCon>ul>ol>li>a{
+    font-size:18px;
+    color:#4c4c4c;}
+#headCon>ul>ol>li>a:hover{
+    color:#fb0000;}
+#headCon>ul>ol>li>.first{
+    color:#fb0000;}
+#headCon>ul>ol>.search{
+    margin-top:10px;
+    margin-left:90px;}
+#headCon>ul>ol>.search>input{
+    width:254px;
+    height:40px;
+    border:1px solid #fb0000;
+    border-radius:20px;
+    outline:none;
+    color:#999;
+    padding-left:16px;
+    font-size:16px;}
 
+bode{
+    text-align:center
+}
+
+.content{
+    width: 70%;
+    margin: 0 auto;
+}
 .content ul li{
     width: 900px;
     height: 155px;

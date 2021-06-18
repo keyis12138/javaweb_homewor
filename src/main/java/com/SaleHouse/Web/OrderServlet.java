@@ -37,9 +37,16 @@ public class OrderServlet extends HttpServlet {
         }else if(action.equals("delete")){
             int orderid = Integer.valueOf(request.getParameter("orderid"));
             orderDao.DeleteOrder(orderDao.FindOrder(orderid));
-            request.setAttribute("houses",orderDao.getOrder());
+            request.setAttribute("orders",orderDao.getOrder());
             request.getRequestDispatcher("AdminPage/orderlist.jsp").forward(request, response);
         }else if(action.equals("find")){
+            String username = request.getParameter("username");
+            request.setAttribute("username",username);
+            request.setAttribute("order",orderDao.getUserOrder(userDao.queryUserByUsername(username)));
+            request.getRequestDispatcher("userOrder.jsp").forward(request, response);
+        }else if(action.equals("userdelete")){
+            int orderid = Integer.valueOf(request.getParameter("orderid"));
+            orderDao.DeleteOrder(orderDao.FindOrder(orderid));
             String username = request.getParameter("username");
             request.setAttribute("username",username);
             request.setAttribute("order",orderDao.getUserOrder(userDao.queryUserByUsername(username)));

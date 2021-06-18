@@ -23,7 +23,7 @@ public class UserServlet extends HttpServlet {
         if (action1.equals("delete")) {
             int userid = Integer.valueOf(request.getParameter("userid"));
             userDao.DeleteUser(userDao.FindUser(userid));
-            request.setAttribute("houses", userDao.getUser());
+            request.setAttribute("users", userDao.getUser());
             request.getRequestDispatcher("AdminPage/accountlist.jsp").forward(request, response);
         }
     }

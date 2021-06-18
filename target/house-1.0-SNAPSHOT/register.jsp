@@ -85,29 +85,17 @@
     </script>
 </head>
 <body>
+<body>
+<div id="login">
+    <h1>Register</h1>
     <form>
-        <table>
-            <tr>
-                <td>用户名：</td>
-                <td><input type="text" name="username" id="username"><span id="userspan"></span></td>
-            </tr>
-            <tr>
-                <td>密码：</td>
-                <td><input type="password" name="password" id="password"><span id="pwspan"></span></td>
-            </tr>
-            <tr>
-                <td>确认密码：</td>
-                <td><input type="password" name="password2" id="password2"><span id="pw2span"></span></td>
-            </tr>
-            <tr>
-                <td>电子邮箱：</td>
-                <td><input type="email" name="email" id="email"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="提交" id="register"></td>
-                <td><input type="reset" value="取消"></td>
-            </tr>
-        </table>
+        <input type="text" name="username" id="username" placeholder="用户名"> <span id="userspan"></span>
+        <input type="password" name="password" id="password" placeholder="密码"><span id="pwspan"></span>
+        <input type="password" name="password2" id="password2" placeholder="确认密码"><span id="pw2span"></span>
+        <input type="email" name="email" id="email" placeholder="电子邮箱">
+        <button class="but" type="button" id="rgister">提交</button>
     </form>
+</div>
+</body>
 </body>
 </html>

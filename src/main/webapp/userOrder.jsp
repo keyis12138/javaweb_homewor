@@ -51,7 +51,7 @@
             <%=order.getOtime()%>
         </td>
         <td>
-            <a href="deleteServlet?orderid=<%=order.getOid()%>">删除</a>
+            <a href="OrderServlet?action=userdelete&orderid=<%=order.getOid()%>&username=<%=request.getAttribute("username")%>">删除</a>
         </td>
     </tr>
     <%}%>

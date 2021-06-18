@@ -29,7 +29,7 @@
                         if(dataObj.result=="true"){
                             alert("登录成功");
                             if(dataObj.role=="admin"){
-                                location.href="AdminServlet";
+                                location.href="AdminServlet?action=login";
                             }else{
                                 location.href="ListServlet?username="+username;
                             }

@@ -8,8 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <script src="../script/jquery-1.7.2.js"></script>
-    <script>
+    <script src="script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
         $(function () {
             $("#btn").click(function () {
                 var name = $("#name").val();
@@ -30,7 +30,7 @@
                     var pos=o.lastIndexOf("\\");
                     return o.substring(pos+1);
                 }
-                $.post("../HouseServlet",
+                $.post("HouseServlet",
                     {
                         action:"add",
                         name:name,
@@ -47,7 +47,8 @@
                     },
                     function (data){
                         var dataObj=eval("("+data+")");
-                        alert(dataObj.result)
+                        alert(dataObj.result);
+                        window.location.href="AdminServlet?action=house";
                     })
             })
         })

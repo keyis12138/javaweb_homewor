@@ -77,7 +77,7 @@ public class HouseServlet extends HttpServlet {
             String name = String.valueOf(request.getParameter("name"));
             String size = String.valueOf(request.getParameter("size"));
             String location = String.valueOf(request.getParameter("location"));
-            int price = Integer.valueOf(request.getParameter("pricce"));
+            int price = Integer.valueOf(request.getParameter("price"));
             String img = "houseImg/"+String.valueOf(request.getParameter("photo"));
             House house = new House(houseid,name,size,location,img,price);
             houseDao.EditHouse(house);
@@ -90,7 +90,8 @@ public class HouseServlet extends HttpServlet {
             String developer = String.valueOf(request.getParameter("develoer"));
             String state = "在售";
 
-            HouseInfo houseInfo = new HouseInfo(null,name,price,wysort,jzsort,year,developer,location,state,zxstate,imga);
+            HouseInfo houseInfo = new HouseInfo(houseid,name,price,wysort,jzsort,year,developer,location,state,zxstate,imga);
+
             infoDao.EditHouseInfo(houseInfo);
 
             Map<String,Object>resultmap = new HashMap<>();

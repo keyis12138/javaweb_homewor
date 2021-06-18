@@ -10,9 +10,19 @@
 <html>
 <head>
     <title>Title</title>
-    <script>
+    <script src="script/jquery-1.7.2.js"></script>
+    <%
+        House house = (House) request.getAttribute("houses");
+        HouseInfo houseInfo = (HouseInfo) request.getAttribute("housesinfo");
+    %>
+    <script type="text/javascript">
         $(function () {
             $("#btn").click(function () {
+                function getFileName(o){
+                    var pos=o.lastIndexOf("\\");
+                    return o.substring(pos+1);
+                }
+
                 var name = $("#name").val();
                 var size = $("#size").val();
                 var location = $("#location").val();
@@ -27,13 +37,11 @@
                 var fileNamea = getFileName(photoa);
                 var fileNameb = getFileName(photob);
 
-                function getFileName(o){
-                    var pos=o.lastIndexOf("\\");
-                    return o.substring(pos+1);
-                }
-                $.post("../HouseServlet",
+
+                $.post("HouseServlet",
                     {
-                        action:"add",
+                        action:"edit",
+                        houseid:<%=house.getHid()%>,
                         name:name,
                         size:size,
                         location:location,
@@ -48,7 +56,8 @@
                     },
                     function (data){
                         var dataObj=eval("("+data+")");
-                        alert(dataObj.result)
+                        alert(dataObj.result);
+                        window.location.href="AdminServlet?action=house";
                     })
             })
 
@@ -57,10 +66,7 @@
     </script>
 </head>
 <body>
-<%
-    House house = (House) request.getAttribute("houses");
-    HouseInfo houseInfo = (HouseInfo) request.getAttribute("housesinfo");
-%>
+
 <H1>编辑房屋信息</H1>
 <form action="../HouseServlet" method="post" name="form1" enctype="application/x-www-form-urlencoded">
     <table border="1px">
@@ -102,7 +108,7 @@
         </tr>
         <tr>
             <td>预览图：</td>
-            <td><input type="file" name="photo" id="photo" value="<%=house.getHimg()%>"></td>
+            <td><input type="file" name="photo" id="photoa" value="<%=house.getHimg()%>"></td>
         </tr>
         <tr>
             <td>详细图：</td>
