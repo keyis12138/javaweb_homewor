@@ -13,6 +13,7 @@
         String username = (String) request.getAttribute("username");
     %>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/info.css">
     <script>
         function goback(){
             window.location.href="ListServlet?username=<%=username%>";
@@ -21,36 +22,25 @@
 </head>
 <body>
 <%@include file="head1.jsp"%>
-            <!--基本信息开始-->
-            <div class="main-item">
-                <h3>基本信息</h3>
-                <div class="main-info" style="padding-bottom:5px;" >
-                        价<i style="margin-right:28px"></i>格： <span><%=houseInfo.getPrice()%></span><b></b><em>元/平方米起</em></div>
-                </div>
-                <ul >
-                    <div class="img">
-                        <img style="width:300px;height:250px;" src="<%=houseInfo.getImage()%>">
-                    </div>
-                    <li>
-                       物业类别：<span><%=houseInfo.getWysort()%></span>
-                    </li>
+<div class="main">
+    <div class="img">
+        <img src="<%=houseInfo.getImage()%>">
+    </div>
+    <div class="context">
+        <h3>基本信息</h3>
+        <div class="infomation">
+            <ul>
+                <li><span class="title">价格：</span><span class="price"><%=houseInfo.getPrice()%></span>元/m² </li>
+                <li><span class="title">物业类别：</span><span><%=houseInfo.getWysort()%></span></li>
+                <li><span class="title">建筑类别：</span><span><%=houseInfo.getJzsort()%></span></li>
+                <li><span class="title">装修状况：</span><span><%=houseInfo.getZxstate()%></span></li>
+                <li><span class="title">产权年限：</span><span><%=houseInfo.getYear()%></span>   </li>
+                <li><span class="title">开发商：</span><span><%=houseInfo.getDeveloper()%></span>  </li>
+                <li><span class="title">楼盘地址：</span><span><%=houseInfo.getAddress()%></span> </li>
+            </ul>
+        </div>
 
-                    <li>
-                       建筑类别：<span class="bulid-type"><%=houseInfo.getJzsort()%></span>
-                    </li>
-                    <li>
-                        装修状况：<span class="zx"><%=houseInfo.getZxstate()%></span>
-                    </li>
-                    <li>
-                        产权年限：<span><%=houseInfo.getYear()%></span>
-                    </li>
-                    <li >
-                      开<i style="margin-right: 6px;"></i>发<i style="margin-right: 6px;"></i> 商：<span><%=houseInfo.getDeveloper()%></span>
-
-                    </li>
-                    <li >
-                        楼盘地址：<span><%=houseInfo.getAddress()%></span>
-                    </li>
-                </ul>
+    </div>
+</div>
 </body>
 </html>

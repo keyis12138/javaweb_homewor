@@ -36,7 +36,7 @@
                 var fileNamea = getFileName(photoa);
                 var fileNameb = getFileName(photob);
 
-                $.post("HouseServlet",
+                $.post("../HouseServlet",
                     {
                         action:"edit",
                         houseid:<%=house.getHid()%>,
@@ -55,7 +55,7 @@
                     function (data){
                         var dataObj=eval("("+data+")");
                         alert(dataObj.result);
-                        window.location.href="AdminServlet?action=house";
+                        window.location.href="../AdminServlet?action=house";
                     })
             })
 
@@ -64,10 +64,14 @@
     </script>
 </head>
 <body>
-
-<H1>编辑房屋信息</H1>
+<style>
+    input{
+        width:100% ;
+    }
+</style>
+<%@include file="edit.jsp"%>
 <form action="../HouseServlet" method="post" name="form1" enctype="application/x-www-form-urlencoded">
-    <table border="1px">
+    <table border="1px" style="width: 80%;margin:auto">
         <tr>
             <td>名称：</td>
             <td><input type="text" name="name" id="name" value="<%=house.getHname()%>"></td>

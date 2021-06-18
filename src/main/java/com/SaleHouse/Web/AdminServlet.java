@@ -34,8 +34,6 @@ public class AdminServlet extends HttpServlet {
             request.setAttribute("houses",houseDao.getHouse());
             request.getRequestDispatcher("AdminPage/houselist2.jsp").forward(request,response);
         }
-        //request.getRequestDispatcher("AdminPage/HouseManage.jsp").forward(request, response);
-
     }
 
     @Override
