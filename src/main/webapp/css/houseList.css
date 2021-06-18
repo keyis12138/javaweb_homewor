@@ -55,7 +55,7 @@
     width:22px;
     height:18px;
     vertical-align:middle;
-    background:url(../images/sprite.png) no-repeat 0px 0px;}
+}
 #headCon>div>ol>.shoppingCar>span{
     float:left;
     margin-left:10px;}
@@ -69,7 +69,7 @@
 #headCon>ul>a>li{
     width:92px;
     height:63px;
-    background:url(../images/sprite.png) no-repeat -22px 0px;}
+ }
 #headCon>ul>ol{
     float:left;
     overflow:hidden;

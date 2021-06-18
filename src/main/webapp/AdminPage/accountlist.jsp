@@ -9,7 +9,7 @@
     <script>
         function conf(name,id) {
             if(confirm("确定删除[" + name +"]吗？")){
-                window.location.href = "UserServlet?action1=delete&userid="+id;
+                window.location.href = "UserServlet?action=delete&userid="+id;
             }
         }
     </script>

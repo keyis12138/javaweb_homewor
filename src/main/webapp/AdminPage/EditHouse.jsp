@@ -22,7 +22,6 @@
                     var pos=o.lastIndexOf("\\");
                     return o.substring(pos+1);
                 }
-
                 var name = $("#name").val();
                 var size = $("#size").val();
                 var location = $("#location").val();
@@ -36,7 +35,6 @@
                 var developer = $("#developer").val();
                 var fileNamea = getFileName(photoa);
                 var fileNameb = getFileName(photob);
-
 
                 $.post("HouseServlet",
                     {

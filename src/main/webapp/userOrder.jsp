@@ -57,6 +57,6 @@
     <%}%>
     </tbody>
 </table>
-<a href="ListServlet?username=<%=request.getAttribute("username")%>">返回首页</a>
+<a href="ListServlet?username=<%=request.getAttribute("username")%>" style="float: right">返回首页</a>
 </body>
 </html>

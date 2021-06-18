@@ -9,7 +9,7 @@
 
 <style>
     .header {
-        background-color:#1c2020c9;
+        background-color:#1c2020c9;;
         height: 40px;
         color: #f0ffff;
     }
@@ -23,8 +23,5 @@
 </style>
 
 <div class="header">
-    <div style="float: left; margin-left: 20px;height: 100%;"><a style="color: #f0ffff">我的订单</a></div>
-    <div style="float: right; margin-right: 20px; height: 100%;">
-        <a href="login.jsp" style="color: #f0ffff">注销用户</a>
-    </div>
+    <div style="float: left; margin-left: 20px;height: 100%;"><a>商品详情页</a></div>
 </div>

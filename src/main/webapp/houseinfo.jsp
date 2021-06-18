@@ -20,9 +20,9 @@
     </script>
 </head>
 <body>
-<%@include file="head2.jsp"%>
+<%@include file="head1.jsp"%>
             <!--基本信息开始-->
-            <div class="main-item" align="center">
+            <div class="main-item">
                 <h3>基本信息</h3>
                 <div class="main-info" style="padding-bottom:5px;" >
                         价<i style="margin-right:28px"></i>格： <span><%=houseInfo.getPrice()%></span><b></b><em>元/平方米起</em></div>

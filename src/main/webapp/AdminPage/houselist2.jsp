@@ -8,6 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <script src="script/jquery-1.7.2.js"></script>
     <script>
+        $(function (){
+            $("#add").click(function (){
+                location.href="AdminPage/AddHouse.jsp";
+            })
+
+
+        })
         function conf(name,id) {
             if(confirm("确定删除[" + name +"]吗？")){
                 window.location.href = "HouseServlet?action=delete&houseid="+id;
@@ -60,6 +67,7 @@
         <%}%>
         </tbody>
     </table>
+    <input type="button" value="新增" id="add">s
 </div>
 </body>
 </html>

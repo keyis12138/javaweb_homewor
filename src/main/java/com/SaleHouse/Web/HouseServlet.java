@@ -78,7 +78,7 @@ public class HouseServlet extends HttpServlet {
             String size = String.valueOf(request.getParameter("size"));
             String location = String.valueOf(request.getParameter("location"));
             int price = Integer.valueOf(request.getParameter("price"));
-            String img = "houseImg/"+String.valueOf(request.getParameter("photo"));
+            String img = "houseImg/"+String.valueOf(request.getParameter("photoa"));
             House house = new House(houseid,name,size,location,img,price);
             houseDao.EditHouse(house);
 

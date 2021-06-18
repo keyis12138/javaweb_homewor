@@ -10,6 +10,7 @@
 <head>
     <title>注册</title>
     <script src="script/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
     <script>
         $(function () {
             var nameflag=0,pw1flag=0,pw2flag=0;
@@ -93,7 +94,7 @@
         <input type="password" name="password" id="password" placeholder="密码"><span id="pwspan"></span>
         <input type="password" name="password2" id="password2" placeholder="确认密码"><span id="pw2span"></span>
         <input type="email" name="email" id="email" placeholder="电子邮箱">
-        <button class="but" type="button" id="rgister">提交</button>
+        <button class="but" type="button" id="register">提交</button>
     </form>
 </div>
 </body>
