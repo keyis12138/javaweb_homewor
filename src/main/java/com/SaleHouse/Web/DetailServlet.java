@@ -27,6 +27,8 @@ public class DetailServlet extends HttpServlet {
         int id = Integer.valueOf(request.getParameter("id"));
         HouseInfo houseInfo = infoDao.findHouseInfo(id);
         request.setAttribute("houseInfo", houseInfo);
+        String username = request.getParameter("username");
+        request.setAttribute("username",username);
         if (houseInfo == null)
             response.sendRedirect("houseList.jsp");
         else

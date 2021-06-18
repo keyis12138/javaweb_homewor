@@ -8,17 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%
+        HouseInfo houseInfo = (HouseInfo) request.getAttribute("houseInfo");
+        String username = (String) request.getAttribute("username");
+    %>
     <title>Title</title>
     <script>
         function goback(){
-            window.location.href="DetailServlet";
+            window.location.href="ListServlet?username=<%=username%>";
         }
     </script>
 </head>
 <body>
-<%
-    HouseInfo houseInfo = (HouseInfo) request.getAttribute("houseInfo") ;
-%>
 <%@include file="head2.jsp"%>
             <!--基本信息开始-->
             <div class="main-item" align="center">

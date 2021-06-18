@@ -12,19 +12,25 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/houseList.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
+    <%
+        List<House> houses = (List<House>)request.getAttribute("houses");
+        String username = (String) request.getAttribute("username");
+    %>
     <script>
         function conf(uname,name,id) {
             if(confirm("确定订购[" + name +"]吗？")){
                 window.location.href = "OrderServlet?action=add&hid="+id+"&username="+uname;
             }
         }
+
+        function search(){
+            var keyword = $("#search").val();
+            window.location.href ="SearchServlet?keyword="+keyword+"&username=<%=username%>";
+        }
     </script>
 </head>
 <body>
-<%
-    List<House> houses = (List<House>)request.getAttribute("houses");
-    String username = (String) request.getAttribute("username");
-%>
+
 <div id="headCon">
     <div>
         <p>我的楼盘 你的爱~</p>
@@ -47,8 +53,8 @@
             <li><a href="#">租房</a></li>
             <li><a href="#">查房价</a></li>
             <li class="search">
-                <input placeholder="顺鑫" >
-                <img src="houseImg/search.png" style="width: 29px" >
+                <input placeholder="顺鑫" id="search">
+                <img src="houseImg/search.png" style="width: 29px" onclick="">
             </li>
         </ol>
     </ul>
@@ -62,7 +68,7 @@
                 <img src="<%=house.getHimg()%>">
             </div>
             <div class="info">
-                <span><a href="DetailServlet?id=<%=house.getHid()%>"><%=house.getHname()%>⭐⭐⭐⭐⭐</a></span>
+                <span><a href="DetailServlet?id=<%=house.getHid()%>&username=<%=username%>"><%=house.getHname()%>⭐⭐⭐⭐⭐</a></span>
                 <span class="size"><%=house.getHsize()%>></span><br>
                 <span class="location"><%=house.getHlocation()%></span>
 
