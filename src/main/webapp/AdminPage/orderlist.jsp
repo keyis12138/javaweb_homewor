@@ -5,7 +5,7 @@
 <head>
     <title>订单管理</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/all.css">s
+    <link rel="stylesheet" type="text/css" href="css/all.css">
     <script>
         function conf(name,id) {
             if(confirm("确定删除[" + name +"]吗？")){
