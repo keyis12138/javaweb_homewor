@@ -36,7 +36,7 @@
                 var fileNamea = getFileName(photoa);
                 var fileNameb = getFileName(photob);
 
-                $.post("../HouseServlet",
+                $.post("HouseServlet",
                     {
                         action:"edit",
                         houseid:<%=house.getHid()%>,
@@ -55,7 +55,7 @@
                     function (data){
                         var dataObj=eval("("+data+")");
                         alert(dataObj.result);
-                        window.location.href="../AdminServlet?action=house";
+                        window.location.href="AdminServlet?action=house";
                     })
             })
 

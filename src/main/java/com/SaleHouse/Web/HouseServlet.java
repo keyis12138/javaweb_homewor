@@ -62,7 +62,7 @@ public class HouseServlet extends HttpServlet {
             String jzsort = String.valueOf(request.getParameter("jzsort"));
             String zxstate = String.valueOf(request.getParameter("zxstate"));
             String year = String.valueOf(request.getParameter("year"));
-            String developer = String.valueOf(request.getParameter("develoer"));
+            String developer = String.valueOf(request.getParameter("developer"));
             String state = "在售";
 
             HouseInfo houseInfo = new HouseInfo(null,name,price,wysort,jzsort,year,developer,location,state,zxstate,imga);
@@ -87,7 +87,7 @@ public class HouseServlet extends HttpServlet {
             String jzsort = String.valueOf(request.getParameter("jzsort"));
             String zxstate = String.valueOf(request.getParameter("zxstate"));
             String year = String.valueOf(request.getParameter("year"));
-            String developer = String.valueOf(request.getParameter("develoer"));
+            String developer = String.valueOf(request.getParameter("developer"));
             String state = "在售";
 
             HouseInfo houseInfo = new HouseInfo(houseid,name,price,wysort,jzsort,year,developer,location,state,zxstate,imga);
