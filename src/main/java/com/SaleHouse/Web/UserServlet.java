@@ -52,6 +52,12 @@ public class UserServlet extends HttpServlet {
                     String resultJson = gson.toJson(resultmap);
                     response.getWriter().write(resultJson);
                 }
+            }else{
+                Map<String,Object> resultmap = new HashMap<String,Object>();
+                resultmap.put("result","false");
+                Gson gson = new Gson();
+                String resultJson = gson.toJson(resultmap);
+                response.getWriter().write(resultJson);
             }
         }else if(action.equals("register")){//注册
             String username = request.getParameter("username");
